@@ -4,7 +4,7 @@
 cd ~
 git init
 git remote add origin git@github.com:jintonic/dotfiles.git
-git fetch
+git fetch --depth 1
 git checkout master
 ```
 
