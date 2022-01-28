@@ -6,7 +6,7 @@ git init
 git remote add origin git@github.com:jintonic/dotfiles.git
 git fetch --depth 1
 git checkout master
-git submodule update --depth 1 --init
+git submodule update --init
 ```
 
 Log out and log back in to feel like \$HOME
@@ -50,7 +50,8 @@ to print out the content of `.git/info/sparse-checkout`.
 
 Add a plugin:
 ```sh
-git submodule add https://github.com/tpope/vim-unimpaired .vim/pack/age/start/vim-unimpaired
+git submodule add --depth 1 https://github.com/tpope/vim-unimpaired .vim/pack/age/start/vim-unimpaired
+git config -f .gitmodules submodule..vim/pack/age/start/vim-unimpaired.shallow true
 git commit -am 'added vim plugin unimpared'
 git push
 ```

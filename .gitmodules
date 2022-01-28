@@ -1,33 +1,44 @@
 [submodule ".vim/pack/age/start/SkyBison"]
 	path = .vim/pack/age/start/SkyBison
 	url = https://github.com/paradigm/SkyBison
+	shallow = true
 [submodule ".vim/pack/age/start/bufexplorer"]
 	path = .vim/pack/age/start/bufexplorer
 	url = https://github.com/jlanzarotta/bufexplorer
+	shallow = true
 [submodule ".vim/pack/age/start/neosnippet-snippets"]
 	path = .vim/pack/age/start/neosnippet-snippets
 	url = https://github.com/Shougo/neosnippet-snippets
+	shallow = true
 [submodule ".vim/pack/age/start/neosnippet.vim"]
 	path = .vim/pack/age/start/neosnippet.vim
 	url = https://github.com/Shougo/neosnippet.vim
+	shallow = true
 [submodule ".vim/pack/age/start/tagbar"]
 	path = .vim/pack/age/start/tagbar
 	url = https://github.com/majutsushi/tagbar
+	shallow = true
 [submodule ".vim/pack/age/start/vim-buftabline"]
 	path = .vim/pack/age/start/vim-buftabline
 	url = https://github.com/ap/vim-buftabline
+	shallow = true
 [submodule ".vim/pack/age/start/vim-fugitive"]
 	path = .vim/pack/age/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
+	shallow = true
 [submodule ".vim/pack/age/start/vim-markdown"]
 	path = .vim/pack/age/start/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown
+	shallow = true
 [submodule ".vim/pack/age/start/vim-repeat"]
 	path = .vim/pack/age/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat
+	shallow = true
 [submodule ".vim/pack/age/start/vim-surround"]
 	path = .vim/pack/age/start/vim-surround
 	url = https://github.com/tpope/vim-surround
+	shallow = true
 [submodule ".vim/pack/age/start/vim-unimpaired"]
 	path = .vim/pack/age/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
+	shallow = true
