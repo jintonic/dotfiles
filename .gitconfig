@@ -6,11 +6,14 @@
   co = checkout
   ci = commit
   st = status
+# a branch called master will be created when run git init
 [init]
   defaultBranch = master
 [pull]
   rebase = true
   ff = only
+[push]
+  default = simple
 [color]
   branch = auto
   diff = auto
