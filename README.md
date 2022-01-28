@@ -10,7 +10,7 @@ git checkout master
 
 Log out and log back in to feel like \$HOME
 
-## Exclude certain files
+## Exclude certain dot files
 
 There is no need to check out [.minttyrc](.minttyrc) when you are in a Mac terminal. You need to enable [sparse checkout](https://git-scm.com/docs/git-sparse-checkout) to exclude it from being checked out:
 
@@ -24,3 +24,23 @@ This will add the following two lines in `.git/config`:
 [core]
   sparseCheckout = true
 ```
+
+Then run
+
+```sh
+git sparse-checkout add '/*'
+```
+
+to add `/*` to `.git/info/sparse-checkout` to white list everything, and run
+
+```sh
+git sparse-checkout add '!.minttyrc'
+```
+
+to add `!.minttyrc` to `.git/info/sparse-checkout` to avoid checking it out. This will also immediately remove [.minttyrc](.minttyrc) from your working directory. You can use
+
+```sh
+git sparse-checkout list
+```
+
+to print out the content of `.git/info/sparse-checkout`.
