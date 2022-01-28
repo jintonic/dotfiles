@@ -1,3 +1,4 @@
+# vim: fdm=marker:fen:fdl=0
 # prompt {{{1
 # https://salferrarello.com/zsh-git-status-prompt
 autoload -Uz vcs_info add-zsh-hook
@@ -17,8 +18,25 @@ PROMPT='%F{cyan}[%y, return:%?, history:%h, level:%L, job:%j] %F{yellow}%D %t ${
 %F{green}%n@%m:%F{blue}%~ %# %F{50}'
 
 # alias {{{1
+alias ls='ls --color'
 alias la='ls -A'
-alias ll='ls -lh'
+alias ll='ls -AlFh'
+
+alias df='df -h'
+alias du='du -h'
+
+alias en='emacs -nw'
 alias vi='vim -X'
 
-# vim: fdm=marker:fen:fdl=0
+alias r='root -l'
+alias rbq='root -b -q'
+
+alias sb='screen -X hardstatus alwayslastline "%{= Bk}%H | %-w%{= kB}%n*%t %{-}%+w %= %M %d %D %C %A"'
+alias sd='screen -D -RR'
+alias sl='screen -list'
+alias sw='screen -wipe'
+alias sn='screen -X deflogin off'
+alias ss='screen -X source ~/.screenrc'
+
+# https://superuser.com/questions/1195962/
+export SCREENDIR=$HOME/.screen
