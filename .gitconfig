@@ -7,6 +7,7 @@
   ci = commit
   st = status
   sm = submodule
+  sc = sparse-checkout
 # a branch called master will be created when run git init
 [init]
   defaultBranch = master
