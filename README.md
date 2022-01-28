@@ -44,3 +44,17 @@ git sparse-checkout list
 ```
 
 to print out the content of `.git/info/sparse-checkout`.
+
+## Vim plugins
+
+Add a plugin:
+```sh
+git submodule add https://github.com/tpope/vim-unimpaired .vim/pack/age/start/vim-unimpaired
+git commit -am 'added vim plugin unimpared'
+git push
+```
+
+Update plugins:
+```sh
+git submodule update --remote
+```
