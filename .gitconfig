@@ -32,4 +32,10 @@
   status = + !git commit --amend
   status = P !git push origin
   status = x !sh -c "echo %(file) >> .gitignore && vi .gitignore"
-
+[gui]
+  tabsize = 4
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
