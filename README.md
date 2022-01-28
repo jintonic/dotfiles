@@ -6,6 +6,7 @@ git init
 git remote add origin git@github.com:jintonic/dotfiles.git
 git fetch --depth 1
 git checkout master
+git submodule update --depth 1 --init
 ```
 
 Log out and log back in to feel like \$HOME
@@ -57,4 +58,12 @@ git push
 Update plugins:
 ```sh
 git submodule update --remote
+git commit -am 'updated plugins'
+```
+
+Remove a plugin:
+```sh
+git submodule deinit .vim/pack/age/start/vim-unimpaired
+git rm .vim/pack/age/start/vim-unimpaired
+git commit -m 'removed vim plugin unimpaired'
 ```
