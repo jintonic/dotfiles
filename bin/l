@@ -1,5 +1,6 @@
 #!/bin/sh
-if [ ${OS} = "Windows_NT" ]; then
+# https://codefather.tech/blog/bash-unary-operator-expected/
+if [ "${OS}" == "Windows_NT" ]; then
   winpty vifm "$(PWD)"
 else
   vifm "$(PWD)"
