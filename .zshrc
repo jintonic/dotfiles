@@ -38,9 +38,20 @@ alias sw='screen -wipe'
 alias sn='screen -X deflogin off'
 alias ss='screen -X source ~/.screenrc'
 
-# EVN {{{1
+# environment variables {{{1
 # https://superuser.com/questions/1195962/
 export SCREENDIR=~/.screen
 
 export PATH=~/bin:$PATH
 
+# functions {{{1
+# vifm {{{2
+# https://wiki.vifm.info/index.php/How_to_set_shell_working_directory_after_leaving_Vifm
+l() {
+  local dst="$(command vifm . --choose-dir -)"
+  if [ -z "$dst" ]; then
+    echo 'Directory picking cancelled/failed'
+    return 1
+  fi
+  cd "$dst"
+}
