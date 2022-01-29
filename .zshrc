@@ -14,7 +14,7 @@ zstyle ':vcs_info:git:*' formats '%F{magenta}(%b%u%c)'
 
 # enable substitution in prompt
 setopt prompt_subst
-PROMPT='%F{cyan}[%y, return:%?, history:%h, level:%L, job:%j] %F{yellow}%D %t ${vcs_info_msg_0_}
+PROMPT='%F{cyan}[%y, retval:%?, #cmd:%h, shlvl:%L, job:%j] %F{yellow}%D %t ${vcs_info_msg_0_}
 %F{green}%n@%m:%F{blue}%~ %# %F{50}'
 
 # alias {{{1
@@ -38,5 +38,9 @@ alias sw='screen -wipe'
 alias sn='screen -X deflogin off'
 alias ss='screen -X source ~/.screenrc'
 
+# EVN {{{1
 # https://superuser.com/questions/1195962/
-export SCREENDIR=$HOME/.screen
+export SCREENDIR=~/.screen
+
+export PATH=~/bin:$PATH
+
