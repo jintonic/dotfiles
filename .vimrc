@@ -69,9 +69,14 @@ silent! colorscheme solarized
 "set wildmenu "good for eyes, redundant if the following is set
 set wildmode=list:longest,full
 
-" airline
+" buftabline
 let g:buftabline_show = 1
 let g:buftabline_numbers = 2
+let g:buftabline_indicators = 1
+
+highlight! default link BufTabLineFill StatusLineNC
+highlight! default link BufTabLineCurrent TabLineFill
+highlight! default link BufTabLineHidden StatusLineNC
 
 " map keys to open buffer quickly
 nmap <Leader>1 <Plug>BufTabLine.Go(1)
