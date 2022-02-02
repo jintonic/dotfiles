@@ -9,11 +9,11 @@ set ignorecase
 set smartcase
 set incsearch
 set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
-set runexec
 
 mark b ~/physino/ tags/
 mark f "~/OneDrive - The University of South Dakota/funding/" 22/
 mark h ~/
+mark i "~/Google Drive/My Drive/experiment/ICE/" log/
 mark o ~/overleaf/
 mark q "~/OneDrive - The University of South Dakota/Quantum mechanics/" 22SP/
 
