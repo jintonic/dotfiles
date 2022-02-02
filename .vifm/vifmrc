@@ -18,9 +18,12 @@ mark o ~/overleaf/
 mark q "~/OneDrive - The University of South Dakota/Quantum mechanics/" 22SP/
 
 filetype *.sfs FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR
-" must be the last to cover things not covered above
-" this will result in ignoring 'vi[x]cmd' option
-filetype * ~/bin/myopen
+" filetype * myopen
+" It must be the last to cover things not covered by other filetype settings
+" This will result in ignoring 'vi[x]cmd' option (at least in Linux & Mac)
+" In windows vicmd is not ignored even if filetype * is set
+" So we set vicmd instead of filetype *
+set vicmd=myopen
 
 " responses to "e" cmd
 " no space allowed in between patterns
@@ -37,6 +40,7 @@ nnoremap o :!vim -X %f<cr>
 if has('win')
   set viewcolumns=-{name},8{size},16{mtime}
   nnoremap s :!mintty /bin/sh -l<cr>
+  mark i "/g/My\ Drive/experiment/ICE/" log/
 else
   set viewcolumns=-{name},10{perms},8{size},16{mtime}
   nnoremap s :!screen 1<cr>
