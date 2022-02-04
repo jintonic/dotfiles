@@ -14,8 +14,10 @@ zstyle ':vcs_info:git:*' formats '%F{magenta}(%b%u%c)'
 
 # enable substitution in prompt
 setopt prompt_subst
-PROMPT='%F{cyan}[%y, retval:%?, #cmd:%h, shlvl:%L, job:%j] %F{yellow}%D %t ${vcs_info_msg_0_}
-%F{green}%n@%m:%F{blue}%~ %# %F{50}'
+PROMPT='%F{cyan}cmd %h returned %? @%t on %D
+%F{yellow}%j background %(2j.jobs.job) in %y [shell level: %L]
+%F{green}%n@%m:%F{blue}%~ ${vcs_info_msg_0_}
+%F{red}%N %# %F{50}'
 
 # alias {{{1
 alias ls='ls --color'
