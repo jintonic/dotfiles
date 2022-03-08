@@ -57,3 +57,8 @@ l() {
   fi
   cd "$dst"
 }
+
+# auto completion {{{1
+autoload -Uz compinit
+compinit
+
