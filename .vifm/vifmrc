@@ -17,6 +17,7 @@ mark g ~/Documents/GoogleDrive/ gemadarc/
 mark h ~/ Downloads/
 mark e ~/Documents/GoogleDrive/experiment/ ICE/
 mark o ~/Documents/OneDrive outreach/
+mark v ~/Documents/OneDrive/Video Geant4/
 mark w ~/websites/ physino.xyz/
 
 filetype *.sfs FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR
