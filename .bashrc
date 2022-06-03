@@ -119,6 +119,8 @@ alias sl='screen -list'
 alias sw='screen -wipe'
 alias sn='screen -X deflogin off'
 alias ss='screen -X source ~/.screenrc'
+# https://x.cygwin.com/docs/ug/using-remote-apps.html#using-remote-apps-ssh
+if [ ${OS} = Windows_NT ]; then export DISPLAY=:0.0; fi
 # refresh display setting for old screen session
 if [ ${#STY} -gt 0 ] && [ ${#SSH_TTY} -gt 0 ]; then
   export DISPLAY=`cat ~/.display`
