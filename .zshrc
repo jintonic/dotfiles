@@ -61,7 +61,8 @@ l() {
 # auto completion {{{1
 autoload -Uz compinit
 compinit
-# Geant4 {{{1
+# Geant4 & ROOT {{{1
 if [[ `uname` == "Darwin" ]]; then
-  pushd /usr/local/bin > /dev/null; source geant4.sh; popd > /dev/null
+  pushd ~/Geant4/11.02/bin > /dev/null; source geant4.sh; popd > /dev/null
+  pushd ~/ROOT/6.26.04/bin > /dev/null; source thisroot.sh; popd > /dev/null
 fi
