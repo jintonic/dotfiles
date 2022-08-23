@@ -11,13 +11,17 @@ set incsearch
 set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
 mark a ~/cloud/microsoft/Applications NSF/
+mark b ~/cloud/microsoft/business/ badges/
 mark c ~/cloud/microsoft/Classical\ Mechanics/ Taylor-Classical-Mechanics.pdf
 mark d ~/Downloads/ setup-x86_64.exe
 mark e ~/cloud/google/experiment/ ICE/
+mark f ~/cloud/google/finance/ stock/
 mark g ~/cloud/google/ gemadarc/
 mark h ~/ Downloads/
+mark j ~/cloud/google/family/Jing/ head/
 mark m ~/geant4/ mingle/
 mark o ~/cloud/microsoft outreach/
+mark p ~/cloud/google/photo 22/
 mark r ~/Documents/RIN
 mark v ~/cloud/microsoft/Video Geant4/
 mark w ~/websites/ physino.xyz/
