@@ -63,6 +63,5 @@ autoload -Uz compinit
 compinit
 # Geant4 & ROOT {{{1
 if [[ `uname` == "Darwin" ]]; then
-  pushd ~/Geant4/11.02/bin > /dev/null; source geant4.sh; popd > /dev/null
-  pushd ~/ROOT/6.26.04/bin > /dev/null; source thisroot.sh; popd > /dev/null
+  pushd ~/geant4/11.02/bin > /dev/null; source geant4.sh; popd > /dev/null
 fi
