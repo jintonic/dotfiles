@@ -61,7 +61,9 @@ l() {
 # auto completion {{{1
 autoload -Uz compinit
 compinit
-# Geant4 & ROOT {{{1
+# Mac specific {{{1
 if [[ `uname` == "Darwin" ]]; then
-  pushd ~/geant4/11.02/bin > /dev/null; source geant4.sh; popd > /dev/null
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  pushd /usr/local/bin > /dev/null; source geant4.sh; popd > /dev/null
+  export PATH=~/geant4/gears:$PATH
 fi
