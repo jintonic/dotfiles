@@ -18,11 +18,12 @@ mark e ~/cloud/google/experiment/ ICE/
 mark f ~/cloud/google/finance/ stock/
 mark g ~/cloud/google/ gemadarc/
 mark h ~/ Downloads/
+mark i ~/cloud/google/isotope/ toi_firestone.pdf
 mark j ~/cloud/google/family/Jing/ head/
 mark m ~/geant4/ mingle/
 mark o ~/cloud/microsoft outreach/
 mark p ~/cloud/google/photo 22/
-mark r ~/Documents/RIN
+mark r ~/Documents/ RIN/
 mark v ~/cloud/microsoft/Video Geant4/
 mark w ~/websites/ physino.xyz/
 
@@ -55,4 +56,4 @@ else
   nnoremap s :!screen 1<cr>
 endif
 
-" vim: filetype=vim :
+" vim: ft=vim
