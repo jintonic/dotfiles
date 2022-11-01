@@ -27,6 +27,7 @@ mark r ~/Documents/ RIN/
 mark t ~/cloud/google/teaching/ Rad.Det/
 mark v ~/cloud/microsoft/Video Geant4/
 mark w ~/websites/ physino.xyz/
+mark x ~/cloud/google/tools/ X/
 
 filetype *.sfs FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR
 " filetype * myopen
