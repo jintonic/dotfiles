@@ -16,6 +16,13 @@ endfunction
 " auto save when change in normal mode or leave insert mode
 autocmd TextChanged,InsertLeave <buffer> silent write
 
+" avoid connecting to the X clipboard
+" https://stackoverflow.com/a/10718757
+set clipboard=autoselect
+if $DISPLAY =~ 'cori'
+  set clipboard+=exclude:.*
+endif
+
 " buffer {{{1
 " By default, if you modified the current buffer, you cannot switch to another
 " one unless you save the current buffer or abandon your changes using command
