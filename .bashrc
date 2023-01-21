@@ -120,7 +120,7 @@ alias sw='screen -wipe'
 alias sn='screen -X deflogin off'
 alias ss='screen -X source ~/.screenrc'
 # https://x.cygwin.com/docs/ug/using-remote-apps.html#using-remote-apps-ssh
-if [ ${OS} = Windows_NT ]; then export DISPLAY=:0.0; fi
+if [ The${OS} = TheWindows_NT ]; then export DISPLAY=:0.0; fi
 # refresh display setting for old screen session
 if [ ${#STY} -gt 0 ] && [ ${#SSH_TTY} -gt 0 ]; then
   export DISPLAY=`cat ~/.display`
@@ -155,16 +155,21 @@ fi
 
 export MANPATH=~/man:~/share/man:$MANPATH
 
-export EDITOR='vim -X'
+export EDITOR=vim
 export PAGER='less -r'
 # https://wiki.vifm.info/index.php/How_to_set_shell_working_directory_after_leaving_Vifm
-l() {
+v() {
   local dst="$(command vifm . --choose-dir -)"
   if [ -z "$dst" ]; then
     echo 'Directory picking cancelled/failed'
     return 1
   fi
   cd "$dst"
+}
+# https://github.com/dylanaraps/fff
+f() {
+    fff "$@"
+    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
 }
 
 # nice line drawing in putty 
