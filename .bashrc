@@ -153,6 +153,7 @@ else
   export DYLD_LIBRARY_PATH=$HOME/lib;
 fi
 
+export PKG_CONFIG_PATH=~/lib/pkgconfig
 export MANPATH=~/man:~/share/man:$MANPATH
 
 export EDITOR=vim
