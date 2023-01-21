@@ -168,7 +168,7 @@ v() {
   cd "$dst"
 }
 # https://github.com/dylanaraps/fff
-f() {
+l() {
     fff "$@"
     cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
 }
