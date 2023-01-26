@@ -61,9 +61,13 @@ l() {
 # auto completion {{{1
 autoload -Uz compinit
 compinit
+
 # Mac specific {{{1
 if [[ `uname` == "Darwin" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
-  pushd /usr/local/bin > /dev/null; source geant4.sh; popd > /dev/null
-  export PATH=~/geant4/gears:$PATH
+  g4folder=~/geant4/11.1.0
+  pushd $g4folder/bin > /dev/null; source geant4.sh; popd > /dev/null
+  gears=~/geant4/gears
+  export PATH=$gears:$gears/detector/visualization:$PATH
+  export DYLD_LIBRARY_PATH=$g4folder/lib:$DYLD_LIBRARY_PATH
 fi
