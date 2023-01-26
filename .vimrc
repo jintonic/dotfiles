@@ -213,6 +213,8 @@ let g:tagbar_sort = 0
 let g:tagbar_compact = 1
 " Add support for markdown files in tagbar.
 " https://github.com/jszakmeister/markdown2ctags
+" /path/to/markdown2ctags.py needs to be added in $PATH
+" run markdown2ctags.py in a terminal to test it
 let g:tagbar_type_markdown = {
     \ 'ctagstype': 'markdown',
     \ 'ctagsbin' : 'markdown2ctags.py',
