@@ -54,6 +54,7 @@ if has('win')
   set viewcolumns=-{name},8{size},16{mtime}
   nnoremap s :!mintty /bin/sh -l<cr>
   mark i "/g/My\ Drive/experiment/ICE/" log/
+  set vicmd=start
 else
   set viewcolumns=-{name},10{perms},8{size},16{mtime}
   nnoremap s :!screen 1<cr>
