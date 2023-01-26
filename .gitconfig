@@ -10,7 +10,7 @@
   sc = sparse-checkout
 # a branch called master will be created when run git init
 [init]
-  defaultBranch = master
+	defaultBranch = main
 [pull]
   rebase = true
 [push]
