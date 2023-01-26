@@ -48,6 +48,8 @@ to print out the content of `.git/info/sparse-checkout`.
 
 ## Vim plugins
 
+List all existing plugins: `cat ~/.gitmodules`.
+
 Add a plugin:
 ```sh
 git submodule add --depth 1 https://github.com/tpope/vim-unimpaired .vim/pack/age/start/vim-unimpaired
