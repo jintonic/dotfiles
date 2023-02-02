@@ -158,19 +158,21 @@ export MANPATH=~/man:~/share/man:$MANPATH
 
 export EDITOR=vim
 export PAGER='less -r'
+
 # https://wiki.vifm.info/index.php/How_to_set_shell_working_directory_after_leaving_Vifm
 v() {
   local dst="$(command vifm . --choose-dir -)"
-  if [ -z "$dst" ]; then
-    echo 'Directory picking cancelled/failed'
-    return 1
-  fi
-  cd "$dst"
+  if [ -d "$dst" ]; then cd "$dst"; fi
 }
 # https://github.com/dylanaraps/fff
+f() {
+  fff "$@"
+  cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
+}
+# https://github.com/gokcehan/lf/blob/master/etc/lfcd.sh
 l() {
-    fff "$@"
-    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
+  lf -last-dir-path=$HOME/.local/share/lf/tmp "$@"
+  cd "$(cat $HOME/.local/share/lf/tmp)"
 }
 
 # nice line drawing in putty 
