@@ -47,15 +47,20 @@ export SCREENDIR=~/.screen
 export PATH=~/bin:$PATH
 
 # functions {{{1
-# vifm {{{2
 # https://wiki.vifm.info/index.php/How_to_set_shell_working_directory_after_leaving_Vifm
-l() {
+v() {
   local dst="$(command vifm . --choose-dir -)"
-  if [ -z "$dst" ]; then
-    echo 'Directory picking cancelled/failed'
-    return 1
-  fi
-  cd "$dst"
+  if [ -d "$dst" ]; then cd "$dst"; fi
+}
+# https://github.com/dylanaraps/fff
+f() {
+  fff "$@"
+  cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
+}
+# https://github.com/gokcehan/lf/blob/master/etc/lfcd.sh
+l() {
+  lf -last-dir-path=$HOME/.local/share/lf/tmp "$@"
+  cd "$(cat $HOME/.local/share/lf/tmp)"
 }
 
 # auto completion {{{1
