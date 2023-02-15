@@ -11,6 +11,7 @@ set incsearch
 set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
 mark 2 ~/cloud/microsoft/Experimental\ particle\ physics/23SP
+mark 9 ~/gears/ tutorials/
 mark a ~/cloud/microsoft/Applications NSF/
 mark b ~/cloud/microsoft/business/ badges/
 mark c ~/COHERENT MARS/
@@ -21,7 +22,6 @@ mark g ~/cloud/google/ gemadarc/
 mark h ~/ Downloads/
 mark i ~/cloud/google/isotope/ toi_firestone.pdf
 mark j ~/cloud/google/family/Jing/ head/
-mark m ~/geant4/ mingle/
 mark o ~/cloud/microsoft outreach/
 mark p ~/cloud/google/photo 22/
 mark r ~/Documents/ RIN/
