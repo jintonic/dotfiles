@@ -70,9 +70,6 @@ compinit
 # Mac specific {{{1
 if [[ `uname` == "Darwin" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
-  g4folder=~/gears/INSTALL/Geant4/11.1.0
-  pushd $g4folder/bin > /dev/null; source geant4.sh; popd > /dev/null
-  gears=~/gears
-  export PATH=~/gears:~/gears/build:~/gears/detector/visualization:$PATH
-  export DYLD_LIBRARY_PATH=$g4folder/lib:$DYLD_LIBRARY_PATH
+  export PATH=~/gears/INSTALL/Geant4/11.1.0/bin:$PATH
+  pushd ~/gears > /dev/null; source gears.sh; popd > /dev/null
 fi
