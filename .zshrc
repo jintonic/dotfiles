@@ -69,7 +69,7 @@ compinit
 
 # Mac specific {{{1
 if [[ `uname` == "Darwin" ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+  eval "$(brew shellenv)"
   export PATH=~/gears/INSTALL/Geant4/11.1.0/bin:$PATH
   pushd ~/gears > /dev/null; source gears.sh; popd > /dev/null
 fi
