@@ -42,3 +42,6 @@
 	path = .vim/pack/age/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
 	shallow = true
+[submodule ".ssh"]
+	path = .ssh
+	url = git@github.com:jintonic/ssh.git
