@@ -45,3 +45,4 @@
 [submodule ".ssh"]
 	path = .ssh
 	url = git@github.com:jintonic/ssh.git
+	shallow = true
