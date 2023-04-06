@@ -66,6 +66,8 @@ l() {
 # auto completion {{{1
 autoload -Uz compinit
 compinit
+# put cursor anywhere in a command and hit TAB to complete from there
+setopt COMPLETE_IN_WORD
 
 # Mac specific {{{1
 if [[ `uname` == "Darwin" ]]; then
