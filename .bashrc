@@ -181,10 +181,10 @@ export NCURSES_NO_UTF8_ACS=1
 
 # https://github.com/hpcng/singularity/issues/643
 # configs above this block will be available in singularity containers
-export SINGULARITY_SHELL="/bin/bash"
+export APPTAINER_SHELL="/bin/bash"
 # https://groups.google.com/a/lbl.gov/g/singularity/c/-lzLyY2VLKs
-export SINGULARITY_BINDPATH="/run:/run"
-if [ X"$SINGULARITY_NAME" != X ]; then return; fi
+export APPTAINER_BINDPATH="/run:/run"
+if [ X"$APPTAINER_NAME" != X ]; then return; fi
 
 if [ -f $HOME/.bash_local ]; then source $HOME/.bash_local; fi
 
