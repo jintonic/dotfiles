@@ -42,6 +42,3 @@
 	path = .vim/pack/age/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
 	shallow = true
-[submodule ".vim/pack/age/start/vim-Condor"]
-	path = .vim/pack/age/start/vim-Condor
-	url = https://github.com/Gullumluvl/vim-Condor.git
