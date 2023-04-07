@@ -71,7 +71,7 @@ setopt COMPLETE_IN_WORD
 
 # Mac specific {{{1
 if [[ `uname` == "Darwin" ]]; then
-  eval "$(brew shellenv)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
   export PATH=~/gears/INSTALL/Geant4/11.1.0/bin:$PATH
   pushd ~/gears > /dev/null; source gears.sh; popd > /dev/null
 fi
