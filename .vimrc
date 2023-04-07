@@ -131,6 +131,9 @@ set ignorecase
 autocmd BufEnter * if expand('%:p') !~ '://' | cd %:p:h | endif
 autocmd! BufRead,BufNewFile *.C set filetype=cpp
 
+au BufNewFile,BufRead *.condor set syntax=Condor
+au BufNewFile,BufRead *.submit set syntax=Condor
+
 " folding {{{1
 set fillchars=          "default vert:|,fold:-
 set foldmethod=indent   "fold based on indent
