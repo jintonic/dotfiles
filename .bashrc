@@ -122,7 +122,8 @@ alias ss='screen -X source ~/.screenrc'
 # https://x.cygwin.com/docs/ug/using-remote-apps.html#using-remote-apps-ssh
 if [ The${OS} = TheWindows_NT ]; then export DISPLAY=:0.0; fi
 # refresh display setting for old screen session
-if [ ${#STY} -gt 0 ] && [ ${#SSH_TTY} -gt 0 ]; then
+# https://stackoverflow.com/a/10965292/1801749
+if [ ${#STY} -gt 0 ] && [ ${#SSH_TTY} -gt 0 ] && [ -z "${VCNDESKTOP+xx}" ]; then
   export DISPLAY=`cat ~/.display`
 else
   echo $DISPLAY > ~/.display
