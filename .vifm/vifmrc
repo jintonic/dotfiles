@@ -10,11 +10,11 @@ set smartcase
 set incsearch
 set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
-mark 2 ~/cloud/microsoft/Experimental\ particle\ physics/23SP
+mark 2 ~/cloud/microsoft/Quantum\ mechanics/23FA
 mark 9 ~/gears/ tutorials/
 mark a ~/cloud/microsoft/Applications NSF/
-mark b ~/cloud/microsoft/business/ badges/
-mark c ~/COHERENT MARS/
+mark b ~/cloud/microsoft/business/ PureGem/
+mark c ~/coherent MARS/
 mark d ~/Downloads/ setup-x86_64.exe
 mark e ~/cloud/google/experiment/ ICE/
 mark f ~/cloud/google/finance/ stock/
