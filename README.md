@@ -64,7 +64,7 @@ git submodule update --remote
 git commit -am 'updated plugins'
 ```
 
-Remove a plugin [1]:
+Remove a plugin [git submodule][1]:
 ```sh
 git submodule deinit .vim/pack/age/start/vim-unimpaired
 git rm .vim/pack/age/start/vim-unimpaired
