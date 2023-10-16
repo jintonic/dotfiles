@@ -74,4 +74,5 @@ if [[ `uname` == "Darwin" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
   export PATH=~/gears/INSTALL/Geant4/11.1.0/bin:$PATH
   pushd ~/gears > /dev/null; source gears.sh; popd > /dev/null
+  export PATH=/usr/local/texlive/2023basic/bin/universal-darwin:$PATH
 fi
