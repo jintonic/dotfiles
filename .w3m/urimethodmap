@@ -1,0 +1,7 @@
+ro:      file:/cgi-bin/root.cgi?%s
+ba:      file:/cgi-bin/baidu.cgi?%s
+ci:      file:/cgi-bin/ciba.cgi?%s
+di:      file:/cgi-bin/dict.cgi?%s
+ar:      file:/cgi-bin/arxiv.cgi?%s
+hj:      file:/cgi-bin/hj.cgi?%s
+up:      file:/cgi-bin/usdpeople.cgi?%s
