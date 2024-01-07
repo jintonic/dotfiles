@@ -24,8 +24,8 @@ mark i ~/cloud/google/isotope/ toi_firestone.pdf
 mark j ~/cloud/google/family/Jing/ head/
 "mark k
 mark l ~/cloud/microsoft/LEGEND/ muon/
-mark m ~/COHERENT/ MARS/
-"mark n
+mark m ~/mingle mingle.cc
+mark n ~/cloud/microsoft/COHERENT/ neutrons/
 mark o ~/cloud/microsoft outreach/
 mark p ~/cloud/google/photo 24/
 mark q ~/cloud/google/finance tax/
