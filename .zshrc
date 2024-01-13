@@ -33,7 +33,8 @@ alias vi='vim -X'
 alias r='root -l'
 alias rbq='root -b -q'
 
-alias sb='screen -X hardstatus alwayslastline "%{= Bk}%H | %-w%{= kB}%n*%t %{-}%+w %= %M %d %D %C %A"'
+# https://superuser.com/a/375569
+alias sb='screen -X caption always "%{= ck} %-w%{=r}%n*%t %{-}%+w %= %?%Pcopy mode%?"'
 alias sd='screen -D -RR'
 alias sl='screen -list'
 alias sw='screen -wipe'
