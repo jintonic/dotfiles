@@ -108,8 +108,8 @@ termcapinfo xterm* 'k1=\EOP:k2=\EOQ:k3=\EOR:k4=\EOS'
 ################
 #
 # keybindings
-#
-escape ^Bb # change escape key from ^a to ^b
+# https://superuser.com/questions/74492
+escape `` # use a single ` as prefix, use `` to type literal `
 
 #remove some stupid / dangerous key bindings
 bind k
