@@ -108,19 +108,20 @@ termcapinfo xterm* 'k1=\EOP:k2=\EOQ:k3=\EOR:k4=\EOS'
 ################
 #
 # keybindings
+#
 # https://superuser.com/questions/74492
 escape `` # use a single ` as prefix, use `` to type literal `
+# alt+; to change escape key to 0, alt+' to change back to `
+bindkey ^[; escape 00
+bindkey ^[\' escape ``
 
 #remove some stupid / dangerous key bindings
-bind k
 bind ^k
 bind .
 bind ^\
 bind \\
 bind ^h
 bind h
-#make them better
-bind 'K' kill
 #bind 'I' login on
 #bind 'O' login off
 bind '}' history
@@ -147,12 +148,9 @@ bindkey -m -k k; stuff ^d
 bindkey -k F1 prev
 bindkey -k F2 next
 
-# define alt combinations
-bindkey ^[] screen 1
-bindkey ^[= eval "copy" "stuff ^u"
-bindkey -m ^[= stuff ^u
-bindkey ^[; prev
-bindkey ^[\' next
+bindkey -m [ stuff ^u
+bindkey -m ] stuff ^d
+
 # Yet another hack:
 # Prepend/append register [/] to the paste if ^a^] is pressed.
 # This lets me have autoindent mode in vi.
