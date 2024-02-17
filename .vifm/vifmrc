@@ -17,7 +17,7 @@ mark b ~/cloud/microsoft/business/ PureGem/
 mark c ~/cloud/microsoft/COHERENT CsI/
 mark d ~/Desktop/
 mark e ~/cloud/google/experiment/ ICE/
-mark f ~/cloud/google/finance/ stock/
+mark f ~/cloud/microsoft/finance/ stock/
 mark g ~/cloud/google/ gemadarc/
 mark h ~/ Downloads/
 mark i ~/cloud/google/isotope/ toi_firestone.pdf
@@ -28,7 +28,7 @@ mark m ~/mingle mingle.cc
 mark n ~/cloud/microsoft/COHERENT/ neutrons/
 mark o ~/cloud/microsoft outreach/
 mark p ~/cloud/google/photo 24/
-mark q ~/cloud/google/finance tax/
+mark q ~/cloud/google/outreach QuarkNet/
 mark r ~/Documents/ RIN/
 mark s ~/shine/ README.md
 mark t ~/cloud/google/teaching/ Rad.Det/
@@ -36,7 +36,7 @@ mark u ~/cloud/microsoft/USD college/
 mark v ~/cloud/microsoft/Video Geant4/
 mark w ~/websites/ physino.xyz/
 mark x ~/cloud/google/tools/ X/
-"mark y
+mark y ~/cloud/google/people/ Yongjin.Yang/
 "mark z
 
 filetype *.sfs FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR
