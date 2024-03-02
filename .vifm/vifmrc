@@ -39,6 +39,7 @@ mark x ~/cloud/google/tools/ X/
 mark y ~/cloud/google/people/ Yongjin.Yang/
 "mark z
 
+filetype *.slurm sbatch
 filetype *.sfs FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR
 " filetype * myopen
 " It must be the last to cover things not covered by other filetype settings
