@@ -33,6 +33,9 @@ alias vi='vim -X'
 alias r='root -l'
 alias rbq='root -b -q'
 
+alias t=tmux
+alias tl='tmux new lf'
+
 # https://superuser.com/a/375569
 alias sb='screen -X caption always "%{= ck} %-w%{=r}%n*%t %{-}%+w %= %?%Pcopy mode%?"'
 alias sd='screen -D -RR'
