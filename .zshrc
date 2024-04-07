@@ -34,7 +34,7 @@ alias r='root -l'
 alias rbq='root -b -q'
 
 alias t='tmux -u'
-alias tl='t new lf'
+alias tl='t new l'
 
 # https://superuser.com/a/375569
 alias sb='screen -X caption always "%{= ck} %-w%{=r}%n*%t %{-}%+w %= %?%Pcopy mode%?"'
@@ -56,16 +56,12 @@ v() {
   local dst="$(command vifm . --choose-dir -)"
   if [ -d "$dst" ]; then cd "$dst"; fi
 }
-# https://github.com/dylanaraps/fff
-f() {
-  fff "$@"
-  cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
-}
 # https://github.com/gokcehan/lf/blob/master/etc/lfcd.sh
 l() {
   lf -last-dir-path=$HOME/.local/share/lf/tmp "$@"
   cd "$(cat $HOME/.local/share/lf/tmp)"
 }
+c() { awk "BEGIN { pi=4.0*atan2(1.0,1.0); o=pi/180.0; print $* }" }
 
 # auto completion {{{1
 autoload -Uz compinit
@@ -77,6 +73,6 @@ setopt COMPLETE_IN_WORD
 if [[ `uname` == "Darwin" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
   source ~/gears/gears.sh
-  source ~/mingle/geant4/11.2.1/bin/geant4.sh
+  source ~/geant4/11.2.1/bin/geant4.sh
   export PATH=/usr/local/texlive/2023basic/bin/universal-darwin:$PATH
 fi
