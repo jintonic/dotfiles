@@ -97,7 +97,6 @@ export CLICOLOR=1 # enable colorful output of ls in Mac
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
   alias ls='ls --color=auto'
-
   alias grep='grep -i --color=auto'
 fi
 
@@ -143,16 +142,13 @@ alias news='newsbeuter -q'
 export GS_OPTIONS="-dSAFER -dBATCH -dNOPAUSE -sDEVICE=pdfwrite"
 export WWW_HOME=~/.w3m/bookmark.html
 
-export LC_ALL="en_US.UTF-8"
+# https://www.gnu.org/software/gettext/manual/html_node/Locale-Environment-Variables.html
+export LANG="en_US.UTF-8"
 
 export TEXMFHOME=~/.texmf
 export TERMINFO=~/.terminfo
 
-if [[ `uname` != "Darwin" ]]; then
-  export LD_LIBRARY_PATH=$HOME/lib;
-else
-  export DYLD_LIBRARY_PATH=$HOME/lib;
-fi
+if [[ `uname` != "Darwin" ]]; then export LD_LIBRARY_PATH=$HOME/lib; fi
 
 export PKG_CONFIG_PATH=~/lib/pkgconfig
 export MANPATH=~/man:~/share/man:$MANPATH
@@ -161,6 +157,8 @@ export EDITOR=vim
 export PAGER='less -r'
 
 # https://wiki.vifm.info/index.php/How_to_set_shell_working_directory_after_leaving_Vifm
+# we may need winpty before vifm in windows:
+# https://codefather.tech/blog/bash-unary-operator-expected/
 v() {
   local dst="$(command vifm . --choose-dir -)"
   if [ -d "$dst" ]; then cd "$dst"; fi
@@ -172,8 +170,8 @@ f() {
 }
 # https://github.com/gokcehan/lf/blob/master/etc/lfcd.sh
 l() {
-  lf -last-dir-path=$HOME/.local/share/lf/tmp "$@"
-  cd "$(cat $HOME/.local/share/lf/tmp)"
+  lf -last-dir-path=${HOME}/.local/share/lf/tmp "$@"
+  cd "$(cat "${HOME}/.local/share/lf/tmp")"
 }
 
 # nice line drawing in putty 
@@ -181,10 +179,10 @@ l() {
 export NCURSES_NO_UTF8_ACS=1
 
 # https://github.com/hpcng/singularity/issues/643
-# configs above this block will be available in singularity containers
 export APPTAINER_SHELL="/bin/bash"
 # https://groups.google.com/a/lbl.gov/g/singularity/c/-lzLyY2VLKs
 export APPTAINER_BINDPATH="/run:/run"
+# configs above this block will be available in singularity containers
 if [ X"$APPTAINER_NAME" != X ]; then return; fi
 
 if [ -f $HOME/.bash_local ]; then source $HOME/.bash_local; fi
