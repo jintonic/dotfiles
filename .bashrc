@@ -55,13 +55,6 @@ cyan="\[\e[0;36m\]"
 CYAN="\[\e[1;36m\]"
 PLAIN="\[\e[0m\]"
 
-if [ "$color_prompt" = yes ]; then
-  PS1="${green}\u@\h:${blue}\w\n${magenta}[\!]${PLAIN} "
-else
-  PS1='\u@\h:\w\n[\!] '
-fi
-unset color_prompt
-
 # set screen titles automatically
 case "$TERM" in
   screen)
@@ -186,6 +179,13 @@ l() {
   lf -last-dir-path=${HOME}/.local/share/lf/tmp "$@"
   cd "$(cat "${HOME}/.local/share/lf/tmp")"
 }
+
+if [ "$color_prompt" = yes ]; then
+  PS1="${green}\u@\h:${blue}\w\n${magenta}[\!]${PLAIN} "
+else
+  PS1='\u@\h:\w\n[\!] '
+fi
+unset color_prompt
 
 if [ -f $HOME/.bash_local ]; then source $HOME/.bash_local; fi
 
