@@ -153,7 +153,6 @@ if [[ `uname` != "Darwin" ]]; then export LD_LIBRARY_PATH=$HOME/lib; fi
 export PKG_CONFIG_PATH=~/lib/pkgconfig
 export MANPATH=~/man:~/share/man:$MANPATH
 
-export EDITOR=vim
 export PAGER='less -r'
 
 # https://wiki.vifm.info/index.php/How_to_set_shell_working_directory_after_leaving_Vifm
@@ -168,22 +167,25 @@ f() {
   fff "$@"
   cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
 }
-# https://github.com/gokcehan/lf/blob/master/etc/lfcd.sh
-l() {
-  lf -last-dir-path=${HOME}/.local/share/lf/tmp "$@"
-  cd "$(cat "${HOME}/.local/share/lf/tmp")"
-}
 
 # nice line drawing in putty 
 # (https://superuser.com/questions/278286/making-256-color-and-line-drawing-characters-both-work-in-putty)
 export NCURSES_NO_UTF8_ACS=1
 
 # https://github.com/hpcng/singularity/issues/643
-export APPTAINER_SHELL="/bin/bash"
+# uncomment the following line if you really want a container to load this file
+#export APPTAINER_SHELL="/bin/bash"
 # https://groups.google.com/a/lbl.gov/g/singularity/c/-lzLyY2VLKs
 export APPTAINER_BINDPATH="/run:/run"
 # configs above this block will be available in singularity containers
 if [ X"$APPTAINER_NAME" != X ]; then return; fi
+
+export EDITOR=vim
+# https://github.com/gokcehan/lf/blob/master/etc/lfcd.sh
+l() {
+  lf -last-dir-path=${HOME}/.local/share/lf/tmp "$@"
+  cd "$(cat "${HOME}/.local/share/lf/tmp")"
+}
 
 if [ -f $HOME/.bash_local ]; then source $HOME/.bash_local; fi
 
