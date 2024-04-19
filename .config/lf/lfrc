@@ -1,6 +1,12 @@
 # use :maps to check current hotkey list
 map x delete
 
+cmd open &{{
+  if [ ! -z "$WSL_DISTRO_NAME" ]; then explorer.exe "${f##*/}"; fi
+  if [ `uname` == "Darwin" ]; then open "$f"; fi
+  if [ command -v mimeopen $> /dev/null ]; then mimeopen "$f"; fi
+  if [ command -v xdg-open $> /dev/null ]; then xdg-open "$f"; fi
+}}
 # https://github.com/gokcehan/lf/blob/master/etc/lfrc.example
 map <enter> open
 
@@ -8,8 +14,8 @@ map <enter> open
 # https://github.com/gokcehan/lf/blob/master/etc/lfrc.example
 cmd window ${{ [[ -z "$TMUX" ]] && $SHELL || tmux neww }}
 map w window
-cmd browser ${{ [[ -z "$TMUX" ]] && $SHELL || tmux neww lf }}
-map b browser
+cmd vsplit ${{ [[ -z "$TMUX" ]] && $SHELL || tmux split-window -h }}
+map \\ vsplit
 
 # draw only one column
 # https://github.com/gokcehan/lf/wiki/Tips
