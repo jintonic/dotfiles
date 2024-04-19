@@ -1,9 +1,12 @@
-# ~/.bashrc: executed for non-login shells.
-umask 022
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
 
-# If not running interactively, just export PATH
-PATH=.:$HOME/bin:/usr/sbin:$PATH
-[ -z "$PS1" ] && return
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
 stty -ixon # disable C-q C-s
 
