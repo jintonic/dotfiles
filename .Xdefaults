@@ -1,6 +1,8 @@
 *customization:	-color
 
-!!Source http://github.com/altercation/solarized
+! https://unix.stackexchange.com/questions/212360/copying-pasting-with-urxvt
+
+! http://github.com/altercation/solarized
 
 URxvt*background: #002b36
 URxvt*foreground: #657b83
