@@ -2,10 +2,17 @@
 map x delete
 
 cmd open &{{
-  if [ ! -z "$WSL_DISTRO_NAME" ]; then explorer.exe "${f##*/}"; fi
-  if [ `uname` == "Darwin" ]; then open "$f"; fi
-  if [ command -v mimeopen $> /dev/null ]; then mimeopen "$f"; fi
-  if [ command -v xdg-open $> /dev/null ]; then xdg-open "$f"; fi
+  if [[ "$f" = *.root ]]; then
+    tmux neww root "$f"
+  elif [ ! -z "$WSL_DISTRO_NAME" ]; then
+    explorer.exe "${f##*/}"
+  elif [ `uname` == "Darwin" ]; then
+    open "$f"
+  elif [ command -v mimeopen $> /dev/null ]; then 
+    mimeopen "$f"
+  elif [ command -v xdg-open $> /dev/null ]; then 
+    xdg-open "$f"
+  fi
 }}
 # https://github.com/gokcehan/lf/blob/master/etc/lfrc.example
 map <enter> open
