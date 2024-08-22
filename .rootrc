@@ -1,2 +1,3 @@
+Unix.*.Root.MacroPath: .:$(HOME)/.root
 Browser.Name: TRootBrowserLite
 Canvas.ShowEventStatus: true
