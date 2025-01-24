@@ -72,8 +72,7 @@ setopt COMPLETE_IN_WORD
 # Mac specific {{{1
 if [[ `uname` == "Darwin" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
-  source ~/geant4/gears/gears.sh
-  source ~/geant4/11.2.1/bin/geant4.sh
-  source ~/.rye/env
+  #source ~/geant4/11.3.0/bin/geant4.sh
+  #source ~/.rye/env
   export PATH=/usr/local/texlive/2023basic/bin/universal-darwin:$PATH
 fi
