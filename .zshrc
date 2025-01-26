@@ -48,7 +48,14 @@ alias ss='screen -X source ~/.screenrc'
 # https://superuser.com/questions/1195962/
 export SCREENDIR=~/.screen
 
-export PATH=~/bin:$PATH
+export PATH=~/bin:~/.local/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+[ -s "~/.rye/env" ] && \. "~/.rye/env" # Python
+
+[ -s "~/geant4/11.3.0/bin/geant4.sh" ] && \. "~/geant4/11.3.0/bin/geant4.sh"
 
 # functions {{{1
 # https://wiki.vifm.info/index.php/How_to_set_shell_working_directory_after_leaving_Vifm
@@ -72,7 +79,5 @@ setopt COMPLETE_IN_WORD
 # Mac specific {{{1
 if [[ `uname` == "Darwin" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
-  #source ~/geant4/11.3.0/bin/geant4.sh
-  #source ~/.rye/env
-  export PATH=/usr/local/texlive/2023basic/bin/universal-darwin:$PATH
+  export PATH=/usr/local/texlive/2024basic/bin/universal-darwin:$PATH
 fi
