@@ -1,4 +1,0 @@
-# short format of --extract-audio
--x
-# specify format
---audio-format mp3
