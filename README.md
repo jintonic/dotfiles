@@ -72,3 +72,11 @@ git commit -m 'removed vim plugin unimpaired'
 ```
 
 [submodule]: https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule
+
+## Machine-specific settings
+
+Machine specific settings, such as `export PATH=~/geant4/11.3.0`, can go to `~/.zshenv`, which is not included in this repository. `~/.zshenv` will be sourced before `~/.zshrc`. Ref. <https://shreevatsa.wordpress.com/2008/03/30/zshbash-startup-files-loading-order-bashrc-zshrc-etc/>.
+
+For bash, local settings should be in `~/.bash_local`, which is also not included in this repository.
+
+
