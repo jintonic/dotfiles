@@ -24,6 +24,11 @@ alias ls='ls --color'
 alias la='ls -A'
 alias ll='ls -AlFh'
 
+alias fh='find . -name '
+alias ..='cd ..'
+alias psg='ps aux | grep -v grep | grep -i -e VSZ -e '
+alias md='mkdir -p'
+
 alias df='df -h'
 alias du='du -h'
 
@@ -34,21 +39,10 @@ alias r='root -l'
 alias rbq='root -b -q'
 
 alias t='tmux -u'
-alias tl='t new l'
-
-# https://superuser.com/a/375569
-alias sb='screen -X caption always "%{= ck} %-w%{=r}%n*%t %{-}%+w %= %?%Pcopy mode%?"'
-alias sd='screen -D -RR'
-alias sl='screen -list'
-alias sw='screen -wipe'
-alias sn='screen -X deflogin off'
-alias ss='screen -X source ~/.screenrc'
+alias tl='tmux -u new l'
 
 # environment variables {{{1
-# https://superuser.com/questions/1195962/
-export SCREENDIR=~/.screen
-
-export PATH=~/bin:~/.local/bin:$PATH
+export PATH=~/.local/bin:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -58,11 +52,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "~/geant4/11.3.0/bin/geant4.sh" ] && \. "~/geant4/11.3.0/bin/geant4.sh"
 
 # functions {{{1
-# https://wiki.vifm.info/index.php/How_to_set_shell_working_directory_after_leaving_Vifm
-v() {
-  local dst="$(command vifm . --choose-dir -)"
-  if [ -d "$dst" ]; then cd "$dst"; fi
-}
 # https://github.com/gokcehan/lf/blob/master/etc/lfcd.sh
 l() {
   lf -last-dir-path=$HOME/.local/share/lf/tmp "$@"

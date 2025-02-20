@@ -58,15 +58,6 @@ cyan="\[\e[0;36m\]"
 CYAN="\[\e[1;36m\]"
 PLAIN="\[\e[0m\]"
 
-# set screen titles automatically
-case "$TERM" in
-  screen)
-    PROMPT_COMMAND='echo -n -e "\033k\033\\"'
-    ;;
-  *)
-    ;;
-esac
-
 # http://github.com/joepvd/tty-solarized
 if [ "$TERM" = "linux" ]; then
   echo -en "\e]PB657b83" # S_base00
@@ -108,24 +99,6 @@ alias md='mkdir -p'
 alias df='df -h'
 alias du='du -h'
 
-alias sb='screen -X hardstatus alwayslastline "%{= Bk}%H | %-w%{= kB}%n*%t %{-}%+w %= %M %d %D %C %A"'
-alias sd='screen -D -RR'
-alias sl='screen -list'
-alias sw='screen -wipe'
-alias sn='screen -X deflogin off'
-alias ss='screen -X source ~/.screenrc'
-# https://x.cygwin.com/docs/ug/using-remote-apps.html#using-remote-apps-ssh
-if [ The${OS} = TheWindows_NT ]; then export DISPLAY=:0.0; fi
-# refresh display setting for old screen session
-# https://stackoverflow.com/a/10965292/1801749
-if [ ${#STY} -gt 0 ] && [ ${#SSH_TTY} -gt 0 ] && [ -z "${VCNDESKTOP+xx}" ]; then
-  export DISPLAY=`cat ~/.display`
-else
-  echo $DISPLAY > ~/.display
-fi
-# https://superuser.com/questions/1195962/cannot-make-directory-var-run-screen-permission-denied
-export SCREENDIR=$HOME/.screen
-
 alias mdp='TERM=xterm-256color mdp'
 alias ev='emacs -nw'
 alias vi='vim -X'
@@ -134,6 +107,9 @@ alias r='root -l'
 alias rbq='root -b -q'
 
 alias news='newsbeuter -q'
+
+alias t='tmux -u'
+alias tl='t new l'
 
 export GS_OPTIONS="-dSAFER -dBATCH -dNOPAUSE -sDEVICE=pdfwrite"
 export WWW_HOME=~/.w3m/bookmark.html
@@ -150,19 +126,6 @@ export PKG_CONFIG_PATH=~/lib/pkgconfig
 export MANPATH=~/man:~/share/man:$MANPATH
 
 export PAGER='less -r'
-
-# https://wiki.vifm.info/index.php/How_to_set_shell_working_directory_after_leaving_Vifm
-# we may need winpty before vifm in windows:
-# https://codefather.tech/blog/bash-unary-operator-expected/
-v() {
-  local dst="$(command vifm . --choose-dir -)"
-  if [ -d "$dst" ]; then cd "$dst"; fi
-}
-# https://github.com/dylanaraps/fff
-f() {
-  fff "$@"
-  cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
-}
 
 # nice line drawing in putty 
 # (https://superuser.com/questions/278286/making-256-color-and-line-drawing-characters-both-work-in-putty)
