@@ -49,8 +49,6 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -s "~/.rye/env" ] && \. "~/.rye/env" # Python
 
-[ -s "~/geant4/11.3.0/bin/geant4.sh" ] && \. "~/geant4/11.3.0/bin/geant4.sh"
-
 # functions {{{1
 # https://github.com/gokcehan/lf/blob/master/etc/lfcd.sh
 l() {
