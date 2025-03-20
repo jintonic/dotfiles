@@ -13,7 +13,7 @@ syn keyword Statement volu volu_assembly place place_param place_assembly
 syn match Statement "^:p " 
 
 syn keyword Type BOX TUBE TUBS CONE CONS TRD PARA TRAP SPHERE ORB TORUS
-syn keyword Type POLOCONE GENERICPOLYCONE POLYHEDRA ELLIPTICALTUBE
+syn keyword Type POLYCONE GENERICPOLYCONE POLYHEDRA ELLIPTICALTUBE
 syn keyword Type ELLIPSOID ELLIPTICALCONE HYPE TET 
 syn keyword Type TWISTEDBOX TWISTEDTRAP TWISTEDTRD TWISTEDTUBS
 syn keyword Type MULTIUNION Boolean_UNION Boolean_SUBTRACTION Boolean_INTERSECTION
