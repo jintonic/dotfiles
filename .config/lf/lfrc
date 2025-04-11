@@ -19,7 +19,12 @@ map <enter> open
 
 # create a new terminal window
 # https://github.com/gokcehan/lf/blob/master/etc/lfrc.example
-cmd window ${{ [[ -z "$TMUX" ]] && $SHELL || tmux neww }}
+cmd window ${{
+  if [[ ! -z "$TMUX" ]]; then tmux neww
+  elif [[ "$__CFBundleIdentifier" =~ warp ]]; then open -a warp .
+  else $SHELL
+  fi
+}}
 map w window
 cmd hsplit ${{ [[ -z "$TMUX" ]] && $SHELL || tmux split-window }}
 map - hsplit
