@@ -1,0 +1,12 @@
+#!/bin/sh
+
+pushd ~/.local/bin
+
+curl -LO https://github.com/gokcehan/lf/releases/download/r34/lf-linux-amd64.tar.gz
+tar xfz lf-linux-amd64.tar.gz
+rm -f lf-linux-amd64.tar.gz
+
+curl https://getmic.ro | bash
+
+popd
+
