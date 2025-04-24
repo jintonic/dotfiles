@@ -8,5 +8,8 @@ rm -f lf-linux-amd64.tar.gz
 
 curl https://getmic.ro | bash
 
+curl -LO https://github.com/jszakmeister/markdown2ctags/raw/refs/heads/master/markdown2ctags.py
+chmod 755 markdown2ctags.py
+
 popd
 
