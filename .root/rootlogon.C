@@ -15,6 +15,7 @@
    gStyle->SetFitFormat(".2f"); // shorten fit result
    gStyle->SetStatX(0.99); // top right corner x
    gStyle->SetStatY(0.99); // top right corner y
+   gStyle->SetStatW(0.30); // width of stat box
    gStyle->SetStatFont(22);
    gStyle->SetLabelFont(22,"XYZ");
    gStyle->SetTitleFont(22,"H");
@@ -22,7 +23,7 @@
    gStyle->SetLabelSize(0.05,"XYZ");
    gStyle->SetTitleSize(0.05,"XYZ");
    gStyle->SetTitleOffset(1.1,"Y");
-   gStyle->SetTitleOffset(-0.5,"Z");
+   gStyle->SetTitleOffset(-1,"Z");
    gStyle->SetPadRightMargin(0.02);
    gStyle->SetPadLeftMargin(0.12);
    gStyle->SetPadTopMargin(0.06);
