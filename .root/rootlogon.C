@@ -23,9 +23,15 @@
    gStyle->SetLabelSize(0.05,"XYZ");
    gStyle->SetTitleSize(0.05,"XYZ");
    gStyle->SetTitleOffset(1.1,"Y");
+<<<<<<< HEAD
    gStyle->SetTitleOffset(-1,"Z");
    gStyle->SetPadRightMargin(0.02);
    gStyle->SetPadLeftMargin(0.12);
+=======
+   gStyle->SetTitleOffset(-0.5,"Z");
+   gStyle->SetPadRightMargin(0.025);
+   gStyle->SetPadLeftMargin(0.15);
+>>>>>>> 5f06a3f (fine tuned)
    gStyle->SetPadTopMargin(0.06);
    gStyle->SetPadBottomMargin(0.11);
    // http://root.cern.ch/root/html/TAttText.html#T1
