@@ -10,7 +10,7 @@ syn keyword Statement mixt_by_weight mixt_by_natoms mixt_by_volume
 syn keyword Statement solid color colour rotm vis check_overlaps
 syn keyword Statement div_width div_ndiv div_ndiv_width repl 
 syn keyword Statement volu volu_assembly place place_param place_assembly
-syn match Statement "^:p " 
+syn match Statement "^:[p|P][ \t]" 
 
 syn keyword Type BOX TUBE TUBS CONE CONS TRD PARA TRAP SPHERE ORB TORUS
 syn keyword Type POLYCONE GENERICPOLYCONE POLYHEDRA ELLIPTICALTUBE
