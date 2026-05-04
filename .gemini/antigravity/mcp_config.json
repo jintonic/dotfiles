@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "letta-native": {
+      "command": "docker",
+      "args": [
+        "exec",
+        "-i",
+        "-e",
+        "TRANSPORT=stdio",
+        "-e",
+        "RUST_LOG=error",
+        "letta-mcp",
+        "letta-server"
+      ]
+    }
+  }
+}
