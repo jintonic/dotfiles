@@ -42,7 +42,7 @@ alias t='tmux -u'
 alias tl='tmux -u new l'
 
 # environment variables {{{1
-export PATH=~/.local/bin:$PATH
+export PATH=~/.antigravity/antigravity/bin:~/.local/bin:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -58,6 +58,7 @@ l() {
 c() { awk "BEGIN { pi=4.0*atan2(1.0,1.0); o=pi/180.0; print $* }" }
 
 # auto completion {{{1
+fpath=(/Users/jing.liu/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # put cursor anywhere in a command and hit TAB to complete from there
@@ -66,5 +67,5 @@ setopt COMPLETE_IN_WORD
 # Mac specific {{{1
 if [[ `uname` == "Darwin" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
-  export PATH=/usr/local/texlive/2024basic/bin/universal-darwin:$PATH
 fi
+
