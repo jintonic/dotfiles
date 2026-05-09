@@ -147,6 +147,14 @@ l() {
   lf -last-dir-path=${HOME}/.local/share/lf/tmp "$@"
   cd "$(cat "${HOME}/.local/share/lf/tmp")"
 }
+# https://yazi-rs.github.io/docs/quick-start#shell-wrapper
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  command yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+  command rm -f -- "$tmp"
+}
 
 if [ "$color_prompt" = yes ]; then
   PS1="${green}\u@\h:${blue}\w\n${magenta}[\!]${PLAIN} "
