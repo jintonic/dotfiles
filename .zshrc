@@ -49,6 +49,15 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -s "~/.rye/env" ] && \. "~/.rye/env" # Python
 
+## use containerized Letta server instead of the one on the cloud
+export LETTA_BASE_URL="http://localhost:8283"
+## fake API key to prevent start warning 
+export LETTA_API_KEY="local-dev-no-auth"
+## git clone bare MemFS repos to this machine
+export LETTA_MEMFS_LOCAL=1
+## talk to bare MemFS repos through Letta server
+export LETTA_MEMFS_BASE_URL="http://localhost:8283"
+
 # functions {{{1
 # https://github.com/gokcehan/lf/blob/master/etc/lfcd.sh
 l() {
@@ -56,6 +65,13 @@ l() {
   cd "$(cat $HOME/.local/share/lf/tmp)"
 }
 c() { awk "BEGIN { pi=4.0*atan2(1.0,1.0); o=pi/180.0; print $* }" }
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  command yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+  command rm -f -- "$tmp"
+}
 
 # auto completion {{{1
 fpath=(/Users/jing.liu/.docker/completions $fpath)
