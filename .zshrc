@@ -39,7 +39,7 @@ alias r='root -l'
 alias rbq='root -b -q'
 
 alias t='tmux -u'
-alias tl='tmux -u new l'
+alias ta='tmux attach'
 
 # environment variables {{{1
 export PATH=~/.antigravity/antigravity/bin:~/.local/bin:$PATH
@@ -48,15 +48,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 [ -s "~/.rye/env" ] && \. "~/.rye/env" # Python
-
-## use containerized Letta server running on Hetzner
-export LETTA_BASE_URL="http://49.13.232.124:8283"
-## fake API key to prevent start warning 
-export LETTA_API_KEY="local-dev-no-auth"
-## git clone bare MemFS repos to this machine
-export LETTA_MEMFS_LOCAL=1
-## talk to bare MemFS repos through Letta server
-export LETTA_MEMFS_BASE_URL="http://49.13.232.124:8283"
 
 # functions {{{1
 # https://github.com/gokcehan/lf/blob/master/etc/lfcd.sh
